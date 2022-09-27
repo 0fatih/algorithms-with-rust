@@ -9,7 +9,7 @@ fn main() {
     println!("Sorted list: {:?}", list)
 }
 
-fn sort(list: &mut Vec<usize>) {
+fn sort(list: &mut Vec<i32>) {
     for i in 1..list.len() {
         let mut j = i;
 
@@ -20,8 +20,8 @@ fn sort(list: &mut Vec<usize>) {
     }
 }
 
-fn get_random_vec(size: usize) -> Vec<usize> {
-    let mut list = Vec::with_capacity(size);
+fn get_random_vec(size: i32) -> Vec<i32> {
+    let mut list = Vec::with_capacity(size as usize);
 
     for _ in 0..size {
         list.push(rand::thread_rng().gen_range(0..1_000_000));
